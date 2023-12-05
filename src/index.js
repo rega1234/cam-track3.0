@@ -3,4 +3,4 @@ import { connectDB } from "./db.js"
 
 connectDB();
 app.listen(8081);
-console.log("Server is runing on 4000 port");
+console.log("Server is runing on 8081 port");
