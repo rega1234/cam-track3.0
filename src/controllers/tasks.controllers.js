@@ -21,12 +21,12 @@ export const createTask = async (req, res) => {
 
 export const getTask = async (req, res) => {
     const taskToFind = await Task.findById(req.params.id);
-    if(!taskToFind) return res.satatus(404).json({ message: "Task not found" });
+    if(!taskToFind) return res.status(404).json({ message: "Task not found" });
     res.json(taskToFind);
 };
 
 export const deleteTask = async (req, res) => {
-    const task = await Task.findByIdAndRemove(req.params.id)
+    const task = await Task.findByIdAndDelete(req.params.id)
     if(!task) return res.status(404).json({ message: "task not found" })
     res.json(task);
 };

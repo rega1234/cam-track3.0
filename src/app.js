@@ -5,10 +5,11 @@ import cookieParser from "cookie-parser";
 import taskRoutes from './routes/tasks.routes.js';
 import cors from 'cors';
 
-const app = express({
-    origin: "http://localhost:5173"
-});
-app.use(cors());
+const app = express();
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
