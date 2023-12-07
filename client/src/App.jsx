@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
 import Navbar from "./components/Navbar";
+import Mapa from "./pages/mapa";
 
 
 function App(){
@@ -23,6 +24,7 @@ function App(){
               <Route path='/' element={<HomePage/>} />
               <Route path='/login' element={<LogInPage/>} />
               <Route path='/register' element={<RegisterPage/>} />
+              <Route path='/mapa/:lon/:lat' element={<Mapa />} />
               <Route element={<ProtectedRoute/>}>
                 <Route path='/tasks' element={<TaskPage/>} />
                 <Route path="/add-task" element={<TaskFormPage/>} />

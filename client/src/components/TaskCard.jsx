@@ -14,12 +14,7 @@ function TaskCard({ task }){
                         }}
                     >delete</button>
                     <Link to={`/task/${task._id}`}>Editar</Link>
-                    <a
-                        href={`../pages/ma.html?lon=${task.longitude}&lat=${task.latitude}`}
-                        target="_blank" // Abre el enlace en una nueva pestaña
-                    >
-                        Ver Ubicacion
-                    </a>
+                    <Link to={`/mapa/${task.longitude}/${task.latitude}`}>Ver Ubicacion</Link>
                 </div>
             </header>
             <p className="text-slate-300">{task.description}</p>
