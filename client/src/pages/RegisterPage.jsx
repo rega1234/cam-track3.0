@@ -51,7 +51,10 @@ function RegisterPage (){
                         errors.password && (
                             <p className=' text-red-500'>Verifica tu contraseña</p>
                     )}
-                    <button type='submit'>Registrar</button>
+                    <button
+                        className=" bg-zinc-900 hover:bg-zinc-700 text-white px-4 py-2 rounded-md"
+
+                    type='submit'>Registrar</button>
                 </form>
                 <p className='flex gap-x-2 justify-between'>
                     Ya tienes una cuenta? <Link to='/login' className=' text-sky-600'>Inicio de sesion</Link>
