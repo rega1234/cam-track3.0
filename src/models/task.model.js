@@ -12,6 +12,15 @@ const taskSchema = new mongoose.Schema({
     date:{
         type: Date,
     },
+
+    longitude: {
+        type: String,
+        required: true,
+    },
+    latitude: {
+        type: String,
+        required: true,
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

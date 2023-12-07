@@ -3,24 +3,22 @@ import { replicationTxtFiles } from './replication.controller.js';
 
 
 export const getTasks = async (req, res) => {
-     try {
-        const tasks = await Task.find({
-            user: req.user.id
-         }).populate('user')
-         res.json(tasks);
-     } catch (error) {
-        return res.status(404).json({ message: "Task not found" });
-     }
+     const tasks = await Task.find({
+        user: req.user.id
+     }).populate('user')
+     res.json(tasks);
 };
 
 export const createTask = async (req, res) => {
     try {
-        const { title, description, date } = req.body;
+        const { title, description, date, longitude, latitude } = req.body;
         const newTask = new Task({
-            title,
-            description,
-            date,
-            user: req.user.id,
+          title,
+          description,
+          date,
+          longitude,
+          latitude,
+          user: req.user.id,
         });
         const savedTask = await newTask.save();
         res.json(savedTask);
@@ -32,13 +30,9 @@ export const createTask = async (req, res) => {
 };
 
 export const getTask = async (req, res) => {
-    try {
-        const taskToFind = await Task.findById(req.params.id);
-        if(!taskToFind) return res.status(404).json({ message: "Task not found" });
-        res.json(taskToFind);
-    } catch (error) {
-        return res.status(404).json({ message: "Task not found" });
-    }
+    const taskToFind = await Task.findById(req.params.id);
+    if(!taskToFind) return res.status(404).json({ message: "Task not found" });
+    res.json(taskToFind);
 };
 
 export const deleteTask = async (req, res) => {
