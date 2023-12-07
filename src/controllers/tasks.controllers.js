@@ -1,4 +1,6 @@
 import Task from '../models/task.model.js';
+import { replicationTxtFiles } from './replication.controller.js';
+
 
 export const getTasks = async (req, res) => {
      const tasks = await Task.find({
@@ -8,17 +10,23 @@ export const getTasks = async (req, res) => {
 };
 
 export const createTask = async (req, res) => {
-    const { title, description, date, longitude, latitude } = req.body;
-    const newTask = new Task({
-        title,
-        description,
-        date,
-        longitude,
-        latitude,
-        user: req.user.id,
-    });
-    const savedTask = await newTask.save();
-    res.json(savedTask);
+    try {
+        const { title, description, date, longitude, latitude } = req.body;
+        const newTask = new Task({
+          title,
+          description,
+          date,
+          longitude,
+          latitude,
+          user: req.user.id,
+        });
+        const savedTask = await newTask.save();
+        res.json(savedTask);
+        replicationTxtFiles("tasks");
+
+    } catch (error) {
+        return res.status(404).json({ message: "failed" });
+    }
 };
 
 export const getTask = async (req, res) => {
@@ -28,16 +36,27 @@ export const getTask = async (req, res) => {
 };
 
 export const deleteTask = async (req, res) => {
-    const task = await Task.findByIdAndDelete(req.params.id)
-    if(!task) return res.status(404).json({ message: "task not found" })
-    res.json(task);
+    try {
+        const task = await Task.findByIdAndDelete(req.params.id)
+        if(!task) return res.status(404).json({ message: "task not found" });
+        res.json(task);
+        replicationTxtFiles("tasks");
+    } catch (error) {
+        return res.status(404).json({ message: "task not found" });
+    }
+    
 };
 
 export const updateTask = async (req, res) => {
-    const task = await Task.findByIdAndUpdate(req.params.id, req.body, {
-        new: true
-    })
-    if(!task) return res.status(404).json({ message: "task not found" })
-    res.json(task);
+    try {
+        const task = await Task.findByIdAndUpdate(req.params.id, req.body, {
+            new: true
+        })
+        if(!task) return res.status(404).json({ message: "task not found" });
+        replicationTxtFiles("tasks");
+        res.json(task);
+    } catch (error) {
+        return res.status(404).json({ message: "task not found" });
+    }
 };
 

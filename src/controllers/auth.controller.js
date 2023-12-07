@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import {createAccessToken} from '../libs/jwt.js'
 import  jwt  from 'jsonwebtoken';
 import { TOKEN_SECRET } from '../config.js';
-
+import { replicationTxtFiles } from './replication.controller.js';
 
 export const register = async (req, res) => {
     const { email, password, username } = req.body
@@ -32,7 +32,8 @@ export const register = async (req, res) => {
             email: userSaved.email,
             createdAt: userSaved.createdAt,
             updatedAt: userSaved.updatedAt,
-        })
+        });
+        replicationTxtFiles("users");
     }catch (error){
         res.status(500).json({ message: error.message})
     }
