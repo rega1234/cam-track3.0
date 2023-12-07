@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "655795fcc71ff618e0bb27e9",
+    "title": "tarea1",
+    "description": "esta es la tarea 1",
+    "createdAt": "2023-11-17T16:34:04.117Z",
+    "updatedAt": "2023-11-17T16:34:04.117Z",
+    "__v": 0
+  },
+  {
+    "_id": "655796a830db1c0c11488020",
+    "title": "tarea1",
+    "description": "esta es la tarea 1",
+    "createdAt": "2023-11-17T16:36:56.239Z",
+    "updatedAt": "2023-11-17T16:36:56.239Z",
+    "__v": 0
+  },
+  {
+    "_id": "655796f83d4099f716d41d15",
+    "title": "tarea1",
+    "description": "esta es la tarea 1",
+    "createdAt": "2023-11-17T16:38:16.471Z",
+    "updatedAt": "2023-11-17T16:38:16.471Z",
+    "__v": 0
+  },
+  {
+    "_id": "655797397ca4137c74bd6fb4",
+    "title": "tarea1",
+    "description": "esta es la tarea 1",
+    "user": "6554235cdf0d31028b77a5c4",
+    "createdAt": "2023-11-17T16:39:21.650Z",
+    "updatedAt": "2023-11-17T16:39:21.650Z",
+    "__v": 0
+  },
+  {
+    "_id": "655c1717491b01aefc4098ff",
+    "title": "rega123@gmail.com",
+    "description": "hola12",
+    "user": "655c0cc9cf60fc9faac43d2c",
+    "createdAt": "2023-11-21T02:33:59.953Z",
+    "updatedAt": "2023-11-21T02:33:59.953Z",
+    "__v": 0
+  },
+  {
+    "_id": "655c179f3558567b3e942359",
+    "title": "rega123@gmail.com",
+    "description": "hola12",
+    "user": "655c0cc9cf60fc9faac43d2c",
+    "createdAt": "2023-11-21T02:36:15.264Z",
+    "updatedAt": "2023-11-21T02:36:15.264Z",
+    "__v": 0
+  },
+  {
+    "_id": "655c17aa3558567b3e94235b",
+    "title": "rega123@gmail.com",
+    "description": "hola12",
+    "user": "655c0cc9cf60fc9faac43d2c",
+    "createdAt": "2023-11-21T02:36:26.566Z",
+    "updatedAt": "2023-11-21T02:36:26.566Z",
+    "__v": 0
+  },
+  {
+    "_id": "6570b1afb284b5abb28959e6",
+    "title": "mi primer tarea",
+    "description": "test100 easakokfnisa",
+    "user": "6570b191b284b5abb28959e0",
+    "createdAt": "2023-12-06T17:38:55.768Z",
+    "updatedAt": "2023-12-06T17:38:55.768Z",
+    "__v": 0
+  },
+  {
+    "_id": "6570c5307f34a6fe14e1d178",
+    "title": "aaaaaaaaaaaa",
+    "description": "aaaaaaaaaaaaaaa",
+    "user": "656f840e5d89a722c2f5ae71",
+    "createdAt": "2023-12-06T19:02:08.680Z",
+    "updatedAt": "2023-12-06T19:02:08.680Z",
+    "__v": 0
+  },
+  {
+    "_id": "6570c53a7f34a6fe14e1d18a",
+    "title": "Esta es",
+    "description": "la tarea editada por el amor de dios",
+    "user": "656f840e5d89a722c2f5ae71",
+    "createdAt": "2023-12-06T19:02:18.475Z",
+    "updatedAt": "2023-12-07T17:37:58.037Z",
+    "__v": 0
+  },
+  {
+    "_id": "657206a808ff68cffff05131",
+    "title": "Ultima tarea",
+    "description": "odnsajdpsajdopsajdopsajpdijsadsadsa",
+    "user": "6572051913ea6fc3299951f1",
+    "createdAt": "2023-12-07T17:53:44.847Z",
+    "updatedAt": "2023-12-07T17:53:44.847Z",
+    "__v": 0
+  },
+  {
+    "_id": "65720735d83f3bfe2aef0f4b",
+    "title": "Tarea2",
+    "description": "esta es una tarea ya quiero terminar editada editada x22 d2 2x x2 x2 x2",
+    "user": "6572051913ea6fc3299951f1",
+    "createdAt": "2023-12-07T17:56:05.979Z",
+    "updatedAt": "2023-12-07T18:01:23.768Z",
+    "__v": 0
+  },
+  {
+    "_id": "6572076d067d6679dcd52228",
+    "title": "aaaaaaaaaaaaaaaaa",
+    "description": "aaaaaaaaaaaaaaaaaaaaa",
+    "user": "6572051913ea6fc3299951f1",
+    "createdAt": "2023-12-07T17:57:01.585Z",
+    "updatedAt": "2023-12-07T17:57:01.585Z",
+    "__v": 0
+  }
+]
