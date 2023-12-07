@@ -44,7 +44,9 @@ function LogInPage (){
                     errors.password && (
                         <p className=' text-red-950'>Verifica tu contraseña</p>
                 )}
-                <button type='submit'>Ingresar</button>
+                <button
+                        className=" bg-zinc-900 hover:bg-zinc-700 text-white px-4 py-2 rounded-md"
+                 type='submit'>Ingresar</button>
             </form>
             <p className='flex gap-x-2 justify-between'>
                 No tienes una cuenta aun? <Link to='/register' className=' text-sky-600'>Crear una cuenta</Link>
