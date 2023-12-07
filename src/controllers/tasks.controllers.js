@@ -8,11 +8,13 @@ export const getTasks = async (req, res) => {
 };
 
 export const createTask = async (req, res) => {
-    const { title, description, date } = req.body;
+    const { title, description, date, longitude, latitude } = req.body;
     const newTask = new Task({
         title,
         description,
         date,
+        longitude,
+        latitude,
         user: req.user.id,
     });
     const savedTask = await newTask.save();

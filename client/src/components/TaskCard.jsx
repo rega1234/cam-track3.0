@@ -1,3 +1,4 @@
+import { get } from "mongoose";
 import { useTasks } from "../context/TaskContext";
 import {Link} from 'react-router-dom';
 function TaskCard({ task }){
@@ -13,6 +14,12 @@ function TaskCard({ task }){
                         }}
                     >delete</button>
                     <Link to={`/task/${task._id}`}>Editar</Link>
+                    <a
+                        href={`../pages/ma.html?lon=${task.longitude}&lat=${task.latitude}`}
+                        target="_blank" // Abre el enlace en una nueva pestaña
+                    >
+                        Ver Ubicacion
+                    </a>
                 </div>
             </header>
             <p className="text-slate-300">{task.description}</p>
